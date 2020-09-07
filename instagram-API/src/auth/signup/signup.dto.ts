@@ -5,7 +5,7 @@ export class SignupDTO {
     @IsString()
     @IsNotEmpty()
     @IsEmail()
-    email: string = '';
+    readonly email: string = '';
 
     @IsString()
     @IsNotEmpty()
@@ -15,14 +15,14 @@ export class SignupDTO {
     @MaxLength(8, {
         message: "Password is too long"
     })
-    password: string = '';
+    readonly password: string = '';
 
     @IsString()
     @IsNotEmpty()
-    name: string = '';
+    readonly name: string = '';
 
     @IsString()
-    image: string | undefined = '';
+    readonly image: string | undefined = '';
 
     constructor(email: string, password: string, name: string, image?: string) {
         this.email = email;

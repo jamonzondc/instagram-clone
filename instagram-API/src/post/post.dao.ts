@@ -1,10 +1,13 @@
+import { Post } from "./post.model";
 
 
 class PostDAO {
 
-    public async save(): Promise<any> {
+    public async save(): Promise<Post> {
         return '';
     }
-    public saync findAll():Promise<
+    public async findAll(): Promise<Post | null> {
+        return null;
+    }
 }
 export const postDAO: PostDAO = new PostDAO();

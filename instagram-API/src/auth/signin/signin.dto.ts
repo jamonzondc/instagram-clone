@@ -5,7 +5,7 @@ export class SigninDTO {
     @IsString()
     @IsNotEmpty()
     @IsEmail()
-    email: string = '';
+    readonly email: string = '';
 
     @IsString()
     @IsNotEmpty()
@@ -15,7 +15,7 @@ export class SigninDTO {
     @MaxLength(8, {
         message: "Password is too long"
     })
-    password: string = '';
+    readonly password: string = '';
 
     constructor(email: string, password: string) {
         this.email = email;
